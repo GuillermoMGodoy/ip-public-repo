@@ -20,7 +20,7 @@ def getAllImages(input=None):
 
     return images
 
-recorre el listado de objetos JSON, lo transforma en una NASACard y lo agrega en el listado de images. Ayuda: ver mapper.py.
+# recorre el listado de objetos JSON, lo transforma en una NASACard y lo agrega en el listado de images. Ayuda: ver mapper.py.
 
 
 def getImagesBySearchInputLike(input):

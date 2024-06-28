@@ -18,12 +18,16 @@ def getAllImagesAndFavouriteList(request):
     return images, favourite_list
 
 # función principal de la galería.
-
+#Codigo realizado por Guillermo Godoy
 def home(request):
     # llama a la función auxiliar getAllImagesAndFavouriteList() y obtiene 2 listados: uno de las imágenes de la API y otro de favoritos por usuario*.
     # (*) este último, solo si se desarrolló el opcional de favoritos; caso contrario, será un listado vacío [].
     images,favourite_list=getAllImagesAndFavouriteList(request)
-
+    # Renderiza la plantilla 'home.html', pasando los datos obtenidos para que 
+    # la plantilla pueda mostrarselos a la persona que ingresa a la pagina
+    # Los datos pasados son un diccionario con dos claves:
+    # 1. 'images': la lista de imágenes de la api de la NASA.
+    # 2. 'favourite_list': la lista de favoritos del usuario.
     return render(request, 'home.html', {'images': images, 'favourite_list': favourite_list} )
 
 
